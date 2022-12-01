@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import { useState, useCallback } from 'react'
 import { connect, IStarknetWindowObject } from '@argent/get-starknet'
 import { ec, getChecksumAddress } from 'starknet'
+import Button from '@mui/material/Button'
 
 export default function Home() {
   const [stark, setStark] = useState<IStarknetWindowObject | undefined>()
@@ -92,60 +93,26 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title} onClick={handleSign}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description} onClick={handleConnect}>
-          Get started by connecting{' '}
-          <code className={styles.code}>your wallet!</code>
+        <p>
+          Prove you have the <a href="https://mintsquare.io/asset/starknet/0x07861c4e276294a7e859ff0ae2eec0c68300ad9cbb43219db907da9bad786488/45471" target="_blank" rel="noreferrer">NFT</a> to unlock!
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Image
+          src="/starknetcc.png"
+          height={300}
+          width={400}
+          alt="StarknetCC"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+        </Image>
+
+        <Button sx={{mt:3}} variant="outlined" onClick={handleConnect} >
+          Connect Wallet
+        </Button>
+
+        <Button sx={{mt:3}} variant="outlined" onClick={handleSign}>
+          Sign and Unlock
+        </Button>
+
+      </main>
     </div>
   )
 }
