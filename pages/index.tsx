@@ -10,7 +10,7 @@ export default function Home() {
   const [stark, setStark] = useState<IStarknetWindowObject | undefined>()
 
   const handleConnect = useCallback(async () => {
-    const stk = await connect({ showList: true })
+    const stk = await connect()
     if (!stk) {
       throw Error(
         'User rejected wallet selection or silent connect found nothing'
