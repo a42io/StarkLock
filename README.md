@@ -22,4 +22,4 @@ Link to NFT: https://mintsquare.io/asset/starknet/0x07861c4e276294a7e859ff0ae2ee
 
 
 ## Demo Video
-- [https://drive.google.com/file/d/1e2PC_JLeZJPMWiewp20aBKOQ-kEphP_W/view?usp=share_link](https://youtube.com/shorts/M7m8CC54NDM)
+- https://youtube.com/shorts/M7m8CC54NDM
