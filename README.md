@@ -19,3 +19,9 @@ Link to NFT: https://mintsquare.io/asset/starknet/0x07861c4e276294a7e859ff0ae2ee
 - Sesame API
 - Vercel
 - Next.js
+
+## Live Demo
+- https://starklock.vercel.app/
+
+## Demo Video
+- https://youtube.com/shorts/M7m8CC54NDM
