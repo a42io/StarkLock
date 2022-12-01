@@ -19,3 +19,7 @@ Link to NFT: https://mintsquare.io/asset/starknet/0x07861c4e276294a7e859ff0ae2ee
 - Sesame API
 - Vercel
 - Next.js
+
+
+## Demo Video
+- https://drive.google.com/file/d/1e2PC_JLeZJPMWiewp20aBKOQ-kEphP_W/view?usp=share_link
