@@ -52,14 +52,10 @@ export default async function handler(
     const value = uint256.bnToUint256(tokenId)
 
     const hoge = await erc721.ownerOf([value.low, value.high])
-
-    console.log(getChecksumAddress(number.toHex(hoge[0])))
-
-    // if (hoge === req.query.address) {
-    //   console.log('hege')
-    // }
-
-    // await executeSesame(Number(req.query.cmd))
+    if (getChecksumAddress(number.toHex(hoge[0])) === req.query.address) {
+      console.log('hege')
+      await executeSesame(Number(req.query.cmd))
+    }
   } catch (e) {
     console.log(e)
   }

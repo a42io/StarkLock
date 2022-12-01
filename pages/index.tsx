@@ -20,10 +20,8 @@ export default function Home() {
     // (optional) connect the wallet
     await stk.enable()
     if (!stk) {
-      console.log('here error')
       return
     }
-    console.log('here set')
     setStark(stk)
 
     // Check if connection was successful
@@ -56,31 +54,23 @@ export default function Home() {
       },
       primaryType: 'Message',
       message: {
-        message: 'a42',
+        message: 'unlock with starklock',
       },
     }
 
     const res = await stark.account.signMessage(typedMessage)
-    console.log(res)
 
     const isVerified = await stark.account.verifyMessage(typedMessage, res)
+
     console.log(isVerified)
-
-    // ugokanai
-    // console.log(await stark.account.getNonce())
-
-    console.log(stark.account.address)
-    console.log(getChecksumAddress(stark.account.address))
-
-    // const ho = ec.getKeyPairFromPublicKey(are)
-    // console.log('here ')
-    // console.log(ho)
-    // const a = ec.getStarkKey(ho)
-    // console.log(a)
-
-    // console.log(are)
-
-    stark.account.execute
+    if (isVerified) {
+      const res = await fetch(
+        `/api/hello?cmd=${83}&address=${getChecksumAddress(
+          stark.account.address
+        )}`
+      )
+      console.log(res)
+    }
   }, [stark])
 
   return (
